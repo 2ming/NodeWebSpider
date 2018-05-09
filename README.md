@@ -3,7 +3,7 @@ node web spider
 
 目标
 
-- [x] 6.4 今日头条Ajax街拍图片抓取
+- [x] 6.4 [今日头条Ajax街拍图片抓取](https://github.com/2ming/NodeWebSpider/blob/master/Jiepai.js)
 - [ ] 3.4 猫眼电影抓取
 
 
