@@ -1,0 +1,30 @@
+{
+  "name": "nodewebspider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2ming/NodeWebSpider.git"
+  },
+  "keywords": [
+    "node",
+    "spider"
+  ],
+  "author": "2ming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2ming/NodeWebSpider/issues"
+  },
+  "homepage": "https://github.com/2ming/NodeWebSpider#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "crypto": "^1.0.1",
+    "koa": "^2.5.1",
+    "superagent": "^3.8.3"
+  }
+}
