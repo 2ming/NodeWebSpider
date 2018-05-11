@@ -49,10 +49,11 @@ function getImage(data) {
 }
 
 async function saveImage(item) {
+  let path_file = path.join(__dirname, item.title)
   try {
-    fs.accessSync('Jiepai/' + item.title)
+    fs.accessSync(path_file)
   } catch (error) {
-    fs.mkdirSync(path.join(__dirname, '/Jiepai', item.title))
+    fs.mkdirSync(path_file)
   }
 
   let new_image_url = item.image.replace('list','large')
@@ -66,7 +67,7 @@ async function saveImage(item) {
     hash.update(response.config.url)
 
     let file_name = hash.digest('hex')
-    let file_path = `Jiepai/${item.title}/${file_name}.jpg`
+    let file_path = path.join(__dirname, item.title, file_name + '.jpg')
 
     try {
       fs.accessSync(file_path)

@@ -8,10 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "启动程序",
-      "args": [
-        "美女"
-      ],
-      "program": "${workspaceFolder}/Jiepai.js"
+      "program": "${workspaceFolder}/MaoYan/maoyan.js"
     }
   ]
 }
