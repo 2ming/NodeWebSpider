@@ -3,7 +3,8 @@ const fs = require('fs')
 const path = require('path')
 const crypto = require('crypto')
 
-const keywords = process.argv.slice(2)
+let keywords = process.argv.slice(2)
+if(keywords.length === 0) { keywords =  ['街拍'] }
 
 const GROUP_END = 6
 
@@ -19,20 +20,14 @@ async function getPage(offset, keyword = '街拍') {
   }
   let url = 'https://www.toutiao.com/search_content'
 
-  let data = await Axios.get(url, { params })
-
-  if(data.status == 200) {
-    return Promise.resolve(data.data)
-  } else {
-    return Promise.reject(data.error)
-  }
-
-  try {
-   let data = await Axios.get(url, { params })
-   return data.data
-  } catch (error) {
-    return Promise.reject(error)
-  }
+  return await Axios.get(url, { params }).then(res => {
+    if(res.status === 200) {
+      return res.data
+    }
+    return []
+  }).catch(err => {
+    return err
+  })
 }
 
 function getImage(data) {
@@ -92,11 +87,9 @@ for(let i = 0; i <= GROUP_END; i++){
   groups.push(i*20)
 }
 
-if(keywords.length) {
-  keywords.forEach(keyword => {
-    groups.forEach(offset => {
-      main(offset, keyword)
-    })    
-  })
-}
+keywords.forEach(keyword => {
+  groups.forEach(offset => {
+    main(offset, keyword)
+  })    
+})
 
