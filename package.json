@@ -25,6 +25,10 @@
     "cheerio": "^1.0.0-rc.2",
     "crypto": "^1.0.1",
     "koa": "^2.5.1",
+    "mongodb": "^3.1.0-beta4",
     "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "puppeteer": "^1.4.0"
   }
 }
