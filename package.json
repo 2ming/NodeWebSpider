@@ -26,7 +26,8 @@
     "crypto": "^1.0.1",
     "koa": "^2.5.1",
     "mongodb": "^3.1.0-beta4",
-    "superagent": "^3.8.3"
+    "superagent": "^3.8.3",
+    "tesseract.js": "^1.0.10"
   },
   "devDependencies": {
     "puppeteer": "^1.4.0"
