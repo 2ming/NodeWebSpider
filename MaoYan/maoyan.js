@@ -47,8 +47,6 @@ async function writeToFile(content) {
       response()
     })
   })
-  
-  
 }
 
 async function main(offset) {
